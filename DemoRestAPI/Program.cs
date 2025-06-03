@@ -1,3 +1,4 @@
+using HtmlAgilityPack;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -42,3 +43,12 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+
+Console.WriteLine("Enter currency code (e.g., USD, EUR):");
+var currency = Console.ReadLine();
+
+Console.WriteLine("Enter quantity:");
+var quantity = Console.ReadLine();
+
+
